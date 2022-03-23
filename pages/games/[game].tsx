@@ -1,6 +1,8 @@
 import { GetServerSideProps } from "next";
 import { Head } from "next/document";
+import Layout from "../../components/layout";
 import { getDatabase } from "../../src/database";
+
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   console.log(context.params.game);
@@ -16,23 +18,21 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: {
       games: data,
-    },
-  };
+        },
+    };
 };
 
 const game = ({ games }) => {
     return (
         <>
-        <Head>
-         <title>{games.name}</title>
-        </Head>
-        <div>
-            <h1>{games.name}</h1>
-            {/* <img src={games.cover.url}/> */}
-        </div>
-        
-      </>
+            <Layout>
+                <div>
+                    <h1>{games[0].name}</h1>
+                </div>
+                <div>{games[0].summary}</div>
+            </Layout>
+        </>
     );
-  };
+};
   
   export default game;
