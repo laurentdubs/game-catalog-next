@@ -1,16 +1,16 @@
-import { MongoClient } from "mongodb";
+import { MongoClient,Db } from "mongodb";
 const MONGODB_URI = process.env.MONGODB_URI;
 
-let cachedDb: MongoClient = null;
+let cachedDb: Db = null;
 
-export function getDatabase(): Promise<MongoClient> {
+export function getDatabase(): Promise<Db> {
   if (cachedDb) {
     return Promise.resolve(cachedDb);
   }
 
   return MongoClient.connect(MONGODB_URI)
-    .then(db => {
-      cachedDb = db;
+    .then(client => {
+      cachedDb = client.db();
       return cachedDb;
     });
 }
