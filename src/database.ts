@@ -14,3 +14,4 @@ export function getDatabase(): Promise<Db> {
       return cachedDb;
     });
 }
+console.log(process.env.MONGO_URL);

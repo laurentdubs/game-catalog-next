@@ -5,7 +5,6 @@ import { getDatabase } from "../../src/database";
 
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  console.log(context.params.game);
 
   const mongodb = await getDatabase();
   const games = await mongodb

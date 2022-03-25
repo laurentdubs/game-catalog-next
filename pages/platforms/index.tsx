@@ -67,8 +67,11 @@ const Platforms: React.FC<{ platforms: any }> = ({platforms}) => {
                                 <div className="card-body">
                                     <div className="row">
                                         <div className="col col-md-4 text-center ">
-                                        {platform.platform_logo}
-                                            <img src={platform.platform_logo} style={styles.image}/>  
+                                        {platform.platform_logo === undefined ? (
+                                            <img src={platform.platform_logo} style={styles.image}/>
+                                            ) : (
+                                                <img src="" alt="" />
+                                            )}  
                                         </div>
                                             <div className="col col-lg-8 p-3">
                                                 <h4  className="card-title">{platform.name}</h4>
