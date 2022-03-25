@@ -68,7 +68,7 @@ const Platforms: React.FC<{ platforms: any }> = ({platforms}) => {
                                     <div className="row">
                                         <div className="col col-md-4 text-center ">
                                         {platform.platform_logo === undefined ? (
-                                            <img src={platform.platform_logo} style={styles.image}/>
+                                            <img src={platform.platform_logo_url} style={styles.image}/>
                                             ) : (
                                                 <img src="" alt="" />
                                             )}  

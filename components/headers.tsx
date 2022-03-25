@@ -15,7 +15,7 @@ export const Header = () => {
                         <Nav.Link href="/platforms">Platforms</Nav.Link>
                         <Nav.Link href="/api/auth/login">Connexion</Nav.Link>
                         <Nav.Link href="/api/auth/logout">Déconnexion</Nav.Link>
-                        <Nav.Link href="/panier">Panier</Nav.Link>
+                        <Nav.Link href="/card">Card</Nav.Link>
 
                     </Nav>
             </Container>

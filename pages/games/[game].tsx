@@ -51,23 +51,8 @@ const game = ({ games }) => {
                      </div>
                   </div>
                 </div>
-              <>
-                {games[0].screenshots === undefined ? (
-                  <div>
-                     <img src="" alt="" />
-                  </div>
-                ) : (
-                  <div>
-                    {screenshots.map((screen) => {
-                    return (
-                      <div key={screen.url}>
-                          <img className="d-block w-100" src={screen.url} alt="First slide" />
-                      </div>
-                    );
-                    })}
-                  </div>
-                )}
-              </>
+                {/* <button className="btn btn-secondary w-100">Add to card</button> */}
+                <button href="/card">Add to card</button> 
             </Layout>
         </>
     );
