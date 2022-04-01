@@ -4,7 +4,7 @@ import { Head } from "next/document";
 import Layout from "../../components/layout";
 import { getDatabase } from "../../src/database";
 import Link from "next/link";
-import { Card } from "react-bootstrap";
+
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const mongodb = await getDatabase();
@@ -14,7 +14,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   .find({"platform.name": context.params.platform})
   .toArray();
   const data = JSON.parse(JSON.stringify(platform));
-  console.log("log", data);   
+  // console.log("log", data);   
  
     return {
       props: {
