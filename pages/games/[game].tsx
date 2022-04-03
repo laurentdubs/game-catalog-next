@@ -2,6 +2,7 @@ import { GetServerSideProps } from "next";
 import { Head } from "next/document";
 import Layout from "../../components/layout";
 import { getDatabase } from "../../src/database";
+import Link from "next/link";
 
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
@@ -51,8 +52,12 @@ const game = ({ games }) => {
                      </div>
                   </div>
                 </div>
-                {/* <button className="btn btn-secondary w-100">Add to card</button> */}
-                <button href="/card">Add to card</button> 
+
+                <div>          
+                  <Link href="/card">
+                    <button className="btn btn-secondary">Card</button>
+                  </Link>  
+                </div>
             </Layout>
         </>
     );

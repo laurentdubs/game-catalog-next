@@ -3,6 +3,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+
 export const Header = () => {
 
     return (
@@ -14,7 +15,6 @@ export const Header = () => {
                         <Nav.Link href="/games">Games</Nav.Link>
                         <Nav.Link href="/platforms">Platforms</Nav.Link>
                         <Nav.Link href="/card">Card</Nav.Link>
-
                     </Nav>
             </Container>
         </Navbar>
